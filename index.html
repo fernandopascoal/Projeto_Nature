@@ -127,9 +127,9 @@
       <div class="colapse_iten">
         <div class="colapse_menu">
           <p class="colapse_title">Trekking</p>
-          <img src="images/darrow.png" alt="Expandir" id="colapse_icon" onclick="mostrar1()">
+          <img src="images/darrow.png" alt="Expandir" class="colapse_icon" onclick="mostrar1()">
         </div>
-        <hr>
+        <hr class="line">
         <div class="colapse_content">
           <img src="images/trekking.jpg" alt="Trekking" class="colapse_img">
           <p class="colapse_text">
@@ -143,8 +143,9 @@
       <div class="colapse_iten">
         <div class="colapse_menu">
           <p class="colapse_title">Canoagem</p>
-          <img src="images/darrow.png" alt="Expandir" id="colapse_icon" onclick="mostrar2()">
+          <img src="images/darrow.png" alt="Expandir" class="colapse_icon" onclick="mostrar2()">
         </div>
+        <hr class="line">
         <div class="colapse_content">
           <img src="images/canoagem.jpg" alt="Canoagem" class="colapse_img">
           <p class="colapse_text">
@@ -158,8 +159,9 @@
       <div class="colapse_iten">
         <div class="colapse_menu">
           <p class="colapse_title">Alpinismo</p>
-          <img src="images/darrow.png" alt="Expandir" id="colapse_icon" onclick="mostrar3()">
+          <img src="images/darrow.png" alt="Expandir" class="colapse_icon" onclick="mostrar3()">
         </div>
+        <hr class="line">
         <div class="colapse_content">
           <img src="images/alpinismo.jpg" alt="Alpinismo" class="colapse_img" id="alpinismo">
           <p class="colapse_text">
@@ -173,8 +175,10 @@
       <div class="colapse_iten">
         <div class="colapse_menu">
           <p class="colapse_title">Parapente</p>
-          <img src="images/darrow.png" alt="Expandir" id="colapse_icon" onclick="mostrar4()">
+          <img src="images/darrow.png" alt="Expandir" class="colapse_icon" onclick="mostrar4()">
         </div>
+        <hr class="line" style="display: none;">
+        
         <div class="colapse_content">
           <img src="images/parapente.jpg" alt="Parapente" class="colapse_img">
           <p class="colapse_text">
@@ -187,11 +191,38 @@
 
     </div>
   </section>
-  <section>
+  <section id="contato">
+    <div id="erro">Erro: Verifique os campos em vermelho</div>
+    <div id="formulario">
+      <form action="enviar" >
 
+        <div id="nome" class="input_container">
+          <span class="input_text">*Nome:</span>
+          <input type="text" name="Nome" id="name" placeholder="Digite seu nome" required class="input_campo">
+        </div>
+
+        <div id="contatos">
+          <div class="input_container container_contatos">
+            <span class="input_text">*E-mail:</span>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required class="input_campo"> 
+          </div>
+          <div class="input_container container_contatos">
+            <span class="input_text">*Telefone:</span>
+            <input type="tel" name="telefone" id="telefone" placeholder="(__) _______-_______" required class="input_campo">
+          </div>
+        </div>
+
+        <div class="input_container" id="textarea">
+          <span class="input_text">*Mensagem:</span>
+          <textarea name="texto" id="texto" cols="30" rows="8" placeholder="Digite sua mensagem" required class="input_campo"></textarea>
+        </div>
+
+        <button id="enviar" onclick="verificar()">Enviar</button>
+      </form>
+    </div>
   </section>
-  <footer>
-
+  <footer id="footer">
+    <p>Todos os direitos reservados</p>
   </footer>
 
 
